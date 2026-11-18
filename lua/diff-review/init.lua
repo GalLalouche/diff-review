@@ -1,9 +1,21 @@
 local M = {}
 
-M.config = {}
+M.defaults = {
+  keymaps = {
+    goto_link = "gd",
+    next_file = "]f",
+    prev_file = "[f",
+    next_action_item = "]a",
+    prev_action_item = "[a",
+  },
+}
+
+M.config = vim.deepcopy(M.defaults)
+M.did_setup = false
 
 function M.setup(opts)
-  M.config = vim.tbl_deep_extend("force", M.config, opts or {})
+  M.did_setup = true
+  M.config = vim.tbl_deep_extend("force", vim.deepcopy(M.defaults), opts or {})
 
   vim.filetype.add({
     extension = {

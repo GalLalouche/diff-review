@@ -1,6 +1,6 @@
 # diff-review
 
-Neovim plugin for reading a review diff and its `.answer` file. It pins the current file and hunk at the top of the window, and jumps between inline `AI #n` / `Disagreement #n` notes and the summary at the bottom.
+Neovim plugin for reading a review diff and its `.answer` file. It pins the current file and hunk at the top of the window, and jumps between inline `AI #n` / `Disagreement #n` notes and the summary at the bottom. 100% vibe-coded.
 
 ## Install with lazy.nvim
 
